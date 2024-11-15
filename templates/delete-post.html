@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content%}
+<h2> Shu postni o`chirasizmi ? </h2>
+<form method="post">
+  {%csrf_token%}
+
+  <button type="submit"> YES </button>
+</form>
+{% endblock%}
