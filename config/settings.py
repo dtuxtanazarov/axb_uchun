@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os.path
 from pathlib import Path
 
-from django.conf.global_settings import STATICFILES_DIRS, MEDIA_URL, MEDIA_ROOT, LOGIN_REDIRECT_URL
+from django.conf.global_settings import STATICFILES_DIRS, MEDIA_URL, MEDIA_ROOT, LOGIN_REDIRECT_URL, STATIC_ROOT
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-stmz29$0=%2o*%-#-p8$me9aatzkz_45@a#3_%=$)7_s$m05jr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -121,6 +121,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+STATIC_ROOT = BASE_DIR/'staticfiles'
 MEDIA_URL='/media/'
 MEDIA_ROOT= str(BASE_DIR.joinpath('media'))
 
